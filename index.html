@@ -511,6 +511,35 @@
         <div class="contact-content">
             <a href="mailto:taylormoverton66@gmail.com" class="contact-btn">📧 Send Me an Email</a>
         </div>
+        <button 
+            onclick="copyEmail()" 
+            class="contact-btn">
+            📧 Copy Email
+            </button>
+
+            <p id="notify" 
+            style="
+                opacity:0;
+                transition:opacity 0.3s;
+                color:#22d3ee;
+                margin-top:8px;
+                font-size:14px;
+            ">
+            Email copied to clipboard!
+            </p>
+
+            <script>
+            function copyEmail() {
+                const email = "youremail@example.com"; // change this to your email
+                navigator.clipboard.writeText(email).then(() => {
+                const note = document.getElementById("notify");
+                note.style.opacity = 1;
+                setTimeout(() => {
+                    note.style.opacity = 0;
+                }, 2000);
+                });
+            }
+            </script>
     </section>
 
     <script>
