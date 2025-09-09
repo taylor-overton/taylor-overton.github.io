@@ -509,14 +509,7 @@
     <section id="contact" class="section">
         <h2>Get In Touch</h2>
         <div class="contact-content">
-            <a href="mailto:taylormoverton66@gmail.com" class="contact-btn">📧 Send Me an Email</a>
-        </div>
-        <button 
-            onclick="copyEmail()" 
-            class="contact-btn">
-            📧 Copy Email
-            </button>
-
+            <a onclick="copyEmail()" class="contact-btn">📧 Send Me an Email</a>
             <p id="notify" 
             style="
                 opacity:0;
@@ -527,7 +520,6 @@
             ">
             Email copied to clipboard!
             </p>
-
             <script>
             function copyEmail() {
                 const email = "youremail@example.com"; // change this to your email
@@ -540,6 +532,7 @@
                 });
             }
             </script>
+        </div>
     </section>
 
     <script>
