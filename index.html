@@ -49,7 +49,7 @@
         }
 
         nav a:hover {
-            color: #00ff9d;
+            color: #5fe990;
             background: rgba(0, 255, 157, 0.1);
         }
 
@@ -61,7 +61,8 @@
             justify-content: center;
             text-align: center;
             position: relative;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 157, 0.1) 0%, transparent 50%);
+            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 157, 0.1) 0%, 
+                transparent 50%);
         }
 
         .hero::before {
@@ -89,7 +90,7 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 0.5rem;
-            background: linear-gradient(45deg, #00ff9d, #00bfff);
+            background: linear-gradient(45deg, #5fe990, #71a5f1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -103,7 +104,7 @@
 
         .hero h2 {
             font-size: 1.5rem;
-            color: #00bfff;
+            color: #71a5f1;
             margin-bottom: 1rem;
             font-weight: 300;
         }
@@ -112,6 +113,15 @@
             font-size: 1.2rem;
             color: #b0b0b0;
             font-style: italic;
+        }
+
+        .hero-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* makes it circular */
+            object-fit: cover;
+            flex-shrink: 0; /* prevents shrinking */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         /* Section Styles */
@@ -125,7 +135,7 @@
             font-size: 2.5rem;
             margin-bottom: 3rem;
             text-align: center;
-            color: #00ff9d;
+            color: #5fe990;
             position: relative;
         }
 
@@ -137,14 +147,14 @@
             transform: translateX(-50%);
             width: 50px;
             height: 2px;
-            background: linear-gradient(90deg, #00ff9d, #00bfff);
+            background: linear-gradient(90deg, #5fe990, #71a5f1);
         }
 
         /* About Section */
         .about-content {
             text-align: center;
             font-size: 1.2rem;
-            max-width: 800px;
+            max-width: 90%;
             margin: 0 auto;
             padding: 2rem;
             background: rgba(255, 255, 255, 0.05);
@@ -158,6 +168,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
+            text-align: center;
         }
 
         .skill-category {
@@ -174,7 +185,7 @@
         }
 
         .skill-category h3 {
-            color: #00bfff;
+            color: #71a5f1;
             margin-bottom: 1rem;
             font-size: 1.3rem;
         }
@@ -183,15 +194,43 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
+            justify-content: center;
         }
 
         .skill-tag {
             background: rgba(0, 255, 157, 0.1);
-            color: #00ff9d;
+            color: #5fe990;
+            text-align: center;
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.9rem;
             border: 1px solid rgba(0, 255, 157, 0.3);
+        }
+
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem auto;       /* centers the grid horizontally */
+            justify-content: center; /* center the grid items */
+            text-align: center;
+            max-width: 800px;        /* optional: limit grid width */
+        }
+
+        .certification-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.5s ease, filter .5s ease; /* smooth hover effect */
+        }
+
+        /* Hover effect */
+        .certification-image:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 15px rgba(37, 149, 93, 0.8))
+                    drop-shadow(0 0 25px rgba(21, 69, 45, 0.5));
         }
 
         /* Projects Section */
@@ -210,6 +249,7 @@
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
 
         .project-card::before {
@@ -219,7 +259,7 @@
             left: -100%;
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #00ff9d, transparent);
+            background: linear-gradient(90deg, transparent, #5fe990, transparent);
             transition: left 0.5s ease;
         }
 
@@ -234,8 +274,9 @@
         }
 
         .project-card h3 {
-            color: #00bfff;
+            color: #71a5f1;
             margin-bottom: 1rem;
+            text-align: center;
         }
 
         .project-links {
@@ -244,7 +285,7 @@
 
         .project-link {
             display: inline-block;
-            color: #00ff9d;
+            color: #5fe990;
             text-decoration: none;
             margin-right: 1rem;
             padding: 0.3rem 0.8rem;
@@ -266,7 +307,7 @@
 
         .download-btn {
             display: inline-block;
-            background: linear-gradient(45deg, #00ff9d, #00bfff);
+            background: linear-gradient(45deg, #5fe990, #71a5f1);
             color: #000;
             padding: 1rem 2rem;
             border-radius: 12px;
@@ -302,7 +343,7 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(0, 255, 157, 0.2);
             border-radius: 12px;
-            color: #00ff9d;
+            color: #5fe990;
             text-decoration: none;
             font-size: 1.5rem;
             transition: all 0.3s ease;
@@ -322,7 +363,7 @@
         .contact-btn {
             display: inline-block;
             background: rgba(0, 255, 157, 0.1);
-            color: #00ff9d;
+            color: #5fe990;
             padding: 1rem 2rem;
             border: 1px solid rgba(0, 255, 157, 0.3);
             border-radius: 12px;
@@ -378,36 +419,45 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(45deg, #00ff9d, #00bfff, #ff6b9d);
+            background: linear-gradient(45deg, #5fe990, #0088ff, #ff6b9d);
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
         }
 
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(45deg, #00bfff, #ff6b9d, #00ff9d);
-            box-shadow: 0 0 15px rgba(0, 255, 157, 0.7);
+
+        #circuit-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;          /* behind everything */
+            background: #0a0a0a;  /* dark PCB background */
         }
     </style>
 </head>
 <body>
+    <!-- Background -->
+    <canvas id="circuit-bg"></canvas>
     <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#resume">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#resume">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
+            <img src="headshot.jpg" alt="Headshot of Taylor Overton" class="hero-image">
             <h1>Taylor Overton</h1>
-            <h2>Cybersecurity & Cloud Engineer</h2>
-            <p>Securing the cloud, one deployment at a time.</p>
+            <p>Engineering Trust in Every Byte.</p>
         </div>
     </section>
 
@@ -415,7 +465,14 @@
     <section id="about" class="section">
         <h2>About Me</h2>
         <div class="about-content">
-            <p>I'm a Cybersecurity and Cloud Engineer with experience designing, automating, and securing cloud-native infrastructure. Passionate about DevSecOps, zero-trust architecture, and building scalable systems.</p>
+            <p>
+                I'm an IT professional with over 3 years of experience building and supporting 
+                secure cloud infrastructures and DevOps pipelines for a leading SIEM/UEBA/SOAR 
+                provider. I specialize in AWS, Linux, and infrastructure as code, with hands-on 
+                experience managing and optimizing security platform operations. Passionate about 
+                blending cloud engineering and cybersecurity, I focus on creating scalable, secure,
+                 and reliable systems that protect critical data while enabling innovation.
+            </p>
         </div>
     </section>
 
@@ -424,35 +481,62 @@
         <h2>Skills & Expertise</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3>☁️ Cloud Platforms</h3>
+                <h3>☁️ Cloud Technologies</h3>
                 <div class="skills-list">
                     <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">Azure</span>
-                    <span class="skill-tag">GCP</span>
-                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">Apache Hadoop</span>
+                    <span class="skill-tag">Microservice Implementation</span>
+                    <span class="skill-tag">Serverless Architectures</span>
                     <span class="skill-tag">Terraform</span>
+                    <span class="skill-tag">Grafana</span>
+                    <span class="skill-tag">Prometheus</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>♾️ DevOps</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">Jenkins</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Kubernetes</span>
+                    <span class="skill-tag">Helm</span>
+                    <span class="skill-tag">Ansible</span>
+                    <span class="skill-tag">Bash</span>
+                    <span class="skill-tag">Python</span>
                 </div>
             </div>
             <div class="skill-category">
                 <h3>🛡️ Security</h3>
                 <div class="skills-list">
-                    <span class="skill-tag">IAM</span>
-                    <span class="skill-tag">Zero Trust</span>
-                    <span class="skill-tag">SIEM</span>
-                    <span class="skill-tag">Threat Modeling</span>
+                    <span class="skill-tag">SIEM & SOAR Operations</span>
+                    <span class="skill-tag">Threat Hunting</span>
+                    <span class="skill-tag">Secrets Management</span>
                     <span class="skill-tag">Incident Response</span>
                 </div>
             </div>
-            <div class="skill-category">
-                <h3>⚙️ DevOps</h3>
-                <div class="skills-list">
-                    <span class="skill-tag">CI/CD</span>
-                    <span class="skill-tag">GitHub Actions</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Helm</span>
-                    <span class="skill-tag">Istio</span>
-                </div>
-            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <h2>Certifications</h2>
+        <div class="certifications-grid">
+            <a href="https://aws.amazon.com/certification/certified-devops-engineer-professional/" 
+                target="_blank" rel="noopener">
+                <img class="certification-image" 
+                    src="devops.png" alt="AWS DevOps Engineer - Professional"
+                >
+            </a>
+            <a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/" 
+                target="_blank" rel="noopener">
+                <img class="certification-image" 
+                    src="solutions-architect.png" alt="AWS Solutions Architect - Associate"
+                >
+            </a> 
+            <a href="https://www.scouting.org/" target="_blank" rel="noopener">
+                <img class="certification-image" 
+                    src="eagle-scout.png" alt="eagle-scout"
+                >
+            </a>    
         </div>
     </section>
 
@@ -461,36 +545,39 @@
         <h2>Featured Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <h3>Cloud Security Lab</h3>
-                <p>Hands-on project for testing IAM, network policies, and vulnerability scanning. Built a comprehensive testing environment to evaluate security controls across multiple cloud providers and document best practices for secure cloud deployments.</p>
+                <h3>Microservice Deployment on EKS</h3>
+                <p>
+                    Deployed a containerized microservice application to AWS EKS using Terraform for
+                     infrastructure provisioning and Helm for Kubernetes package management. 
+                     Implemented observability by integrating Prometheus for metrics collection and 
+                     Grafana for dashboard monitoring, enabling real-time performance insights and 
+                     alerting. Focused on scalable, repeatable, and automated deployment processes 
+                     for cloud-native applications.
+                </p>
+                <!--
                 <div class="project-links">
                     <a href="#" class="project-link">View Project</a>
                     <a href="#" class="project-link">Documentation</a>
                 </div>
+            -->
             </div>
             <div class="project-card">
-                <h3>Terraform Modules for EKS</h3>
-                <p>Infrastructure-as-code for secure and scalable Kubernetes clusters. Developed reusable Terraform modules with built-in security hardening, RBAC configurations, and automated compliance checks for enterprise-grade EKS deployments.</p>
-                <div class="project-links">
-                    <a href="#" class="project-link">GitHub Repo</a>
-                    <a href="#" class="project-link">Live Demo</a>
-                </div>
+                <h3>Cloud Security and SIEM Simulation</h3>
+                <p>
+                    Set up a personal cloud environment on AWS. Implemented security hardening 
+                    including IAM policies, VPC segmentation, and encrypted storage. Integrated an 
+                    open-source SIEM (Wazuh) to collect logs, detect suspicious activity, and 
+                    generate alerts. Developed custom dashboards and automated notifications to 
+                    monitor security events in real-time.
+                </p>
             </div>
             <div class="project-card">
-                <h3>SIEM Dashboard Automation</h3>
-                <p>Automated log aggregation and alerting pipeline using ELK + Prometheus. Created a comprehensive monitoring solution with custom dashboards, intelligent alerting, and automated incident response workflows for real-time threat detection.</p>
-                <div class="project-links">
-                    <a href="#" class="project-link">Case Study</a>
-                    <a href="#" class="project-link">Architecture</a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3>Cloud Security Lab</h3>
-                <p>Hands-on project for testing IAM, network policies, and vulnerability scanning. Built a comprehensive testing environment to evaluate security controls across multiple cloud providers and document best practices for secure cloud deployments.</p>
-                <div class="project-links">
-                    <a href="#" class="project-link">View Project</a>
-                    <a href="#" class="project-link">Documentation</a>
-                </div>
+                <h3>Infrastructure as Code CI/CD Pipeline</h3>
+                <p>
+                    Built a CI/CD pipeline using Jenkins and GitHub that automates provisioning 
+                    infrastructure with Terraform, deploys a containerized application via Docker, 
+                    and runs automated tests before production deployment.
+                </p>
             </div>
         </div>
     </section>
@@ -508,7 +595,7 @@
 
     <!-- Social Links Section -->
     <section id="social" class="section">
-        <h2>Connect With Me</h2>
+        <h2>My Contacts</h2>
         <div class="social-links">
             <a onclick="copyEmail()" class="social-link">📧 Email</a>
             <a href="https://github.com/taylor-overton" class="social-link" target="_blank" title="GitHub">
@@ -518,16 +605,6 @@
                 <span>💼 LinkedIn</span>
             </a>
             
-            <p id="notify" 
-            style="
-                opacity:0;
-                transition:opacity 0.3s;
-                color:#ffffff;
-                margin-top:8px;
-                font-size:14px;
-            ">
-            Email copied to clipboard!
-            </p>
             <script>
             function copyEmail() {
                 const email = "taylormoverton66@gmail.com"; 
@@ -541,6 +618,17 @@
             }
             </script>
         </div>
+        <p id="notify" 
+            style="
+                opacity:0;
+                transition:opacity 0.3s;
+                color:#ffffff;
+                margin-top:8px;
+                font-size:14px;
+                text-align: center;
+            ">
+            Email copied to clipboard!
+        </p>
     </section>
 
 
@@ -584,7 +672,10 @@
             const scrolled = window.pageYOffset;
             const hero = document.querySelector('.hero');
             if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+                // Gentle parallax + cap movement so it doesn't overlap
+                let offset = scrolled * 0.3;
+                if (offset > 200) offset = 200; // cap at 200px
+                hero.style.transform = `translateY(${offset}px)`;
             }
         });
 
@@ -610,6 +701,94 @@
             section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(section);
         });
+    </script>
+
+    <script>
+        const canvas = document.getElementById('circuit-bg');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        // Create nodes with random velocities
+        const nodeCount = 30;
+        const nodes = [];
+        for (let i = 0; i < nodeCount; i++) {
+            nodes.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                vx: (Math.random() - 0.5) * 0.5, // small random speed
+                vy: (Math.random() - 0.5) * 0.5,
+                phase: Math.random() * Math.PI * 2
+            });
+        }
+
+        // Draw traces connecting nodes
+        function drawTraces() {
+            ctx.strokeStyle = 'rgba(0,255,128,0.06)';
+            ctx.lineWidth = 2;
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = '#00ff80';
+
+            nodes.forEach((node, i) => {
+                const next = nodes[(i + 1) % nodes.length]; // looped connection
+                ctx.beginPath();
+                ctx.moveTo(node.x, node.y);
+                ctx.lineTo(next.x, next.y);
+                ctx.stroke();
+            });
+        }
+
+        // Draw nodes
+        function drawNodes() {
+            nodes.forEach(node => {
+                ctx.fillStyle = 'rgba(0,255,128,0.2)';
+                ctx.shadowBlur = 20;
+                ctx.shadowColor = '#00ff80';
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, 4, 0, Math.PI * 2);
+                ctx.fill();
+            });
+        }
+
+        // Update nodes position with slight random drift
+        function updateNodes() {
+            nodes.forEach(node => {
+                node.x += node.vx;
+                node.y += node.vy;
+
+                // small random change in velocity
+                node.vx += (Math.random() - 0.5) * 0.02;
+                node.vy += (Math.random() - 0.5) * 0.02;
+
+                // cap velocities
+                node.vx = Math.max(Math.min(node.vx, 1), -1);
+                node.vy = Math.max(Math.min(node.vy, 1), -1);
+
+                // keep nodes within canvas
+                if (node.x < 0 || node.x > canvas.width) node.vx *= -1;
+                if (node.y < 0 || node.y > canvas.height) node.vy *= -1;
+            });
+        }
+
+        // Animate
+        function animate() {
+            // semi-transparent background for fading trails
+            ctx.fillStyle = 'rgba(0,0,0,.99)'; // deep green + transparency
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            updateNodes();
+            drawTraces();
+            drawNodes();
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();                                                  
     </script>
 </body>
 </html>
